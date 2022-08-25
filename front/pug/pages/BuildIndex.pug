@@ -4,8 +4,12 @@
     .bonus__logo
       img(src="img/logo.svg" alt="Favbet")
     .bonus__img
-      img(src="img/bg.jpg" alt="Favbet").desk
-      img(src="img/bg-mob.jpg" alt="Favbet").mob
+      picture.glitch-img
+        source(media="(max-width: 600px) and (orientation: portrait)" srcset="img/bg-mob.jpg")
+        source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/bg.jpg")
+        source(media="(min-width: 601px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/bg.jpg")
+        source(media="(min-width: 601px) and (orientation: landscape)" srcset="img/bg.jpg")
+        img(src="img/bg.jpg" alt="Favbet")
     .bonus__right
       .bonus__right-title
         .bonus__right-title-left 100%
